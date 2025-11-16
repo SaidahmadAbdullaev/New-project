@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+  transition: 0.3s linear;
+}
+
+body.darken {
+  filter: brightness(0.4);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #0a0a0a;
+  background: #ffffff;
+  padding: 90px 300px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.icon{
+  display: none;
+}
+
+.menu{
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 45px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3c465cc1;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2.4fr 1fr;
+  gap: 10px;
+}
+
+section img {
+  width: 100%;
+  height: 60%;
+}
+
+.info h1 {
+  font-size: 64px;
+  color: #010126;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  line-height: 66px;
+}
+
+.info{
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+
+section{
+  width: 94%;
+  height: 90%;
+}
+
+.right p {
+  color: #3d4e6ab3;
+  line-height: 1.8;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 33px 30px;
+  width: 120%;
+}
+
+button {
+  background: #f15e50;
+  color: #010126;
+  width: 44%;
+  border: none;
+  padding: 15px 16px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffffff;
+  outline: 1px solid #f15e50;
+}
+
+.sidebar {
+  background: #010126;
+  color: white;
+  padding-left: 27px;
+  padding-right: 27px;
+  height: 90%;
+}
+
+.sidebar h2 {
+  color: #e9ab53;
+  font-size: 45px;
+}
+
+.new {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 20px;
+}
+
+.new h3 {
+  font-size: 22px;
+  color: white;
+}
+
+.new p {
+  color: #bdb6b6d7;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: -12px;
+}
+
+.only{
+  border: none;
+  padding-top: 5px;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.card{
+  width: 30%;
+  display: flex;
+  gap: 20px;
+  font-family: "Inter", sans-serif;
+  img{
+    width: 40%;
+  }
+
+  h2{
+    color: #e36340;
+    font-size: 36px;
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-top: -14px;
+    color: #010126;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 14.5px;
+    color: #3d4e6ab3;
+    line-height: 21px;
+    margin-bottom: 0px;
+  }
+}
+
+.side{
+  padding-bottom: 100px;
+}
+
+@media (max-width: 500px) {
+  body{
+    padding: 0 20px;
+    padding-top: 3%;
+    width: 100%;
+  }
+  nav{
+    display: none;
+  }
+  header{
+    margin-bottom: 20px;
+  }
+
+  main{
+    grid-template-columns: 1fr;
+  }
+
+  section img {
+    width: 105%;
+    height: 44%;
+  }
+
+  section{
+    height: 100%;
+  }
+
+  .info{
+    flex-direction: column;
+    h1 {
+      font-size: 47px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+    }
+  }
+
+  .right {
+    padding: 0;
+    width: 100%;
+    padding-right: 20px;
+    margin-top: -30px;
+    p {
+      font-size: 15.7px;
+    }
+    button {
+      font-weight: 800;
+      font-family: "Inter", sans-serif;
+    }
+  }
+
+  .sidebar {
+    margin-top: 120px;
+    width: 100%;
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .container{
+    flex-direction: column;
+    height: 480px;
+    margin-top: 34%;
+    width: 100%;
+  }
+
+  .card{
+    width: 100%;
+    height: 30%;
+    gap: 12%;
+    img {
+      width: 35%;
+    }
+    p {
+      line-height: 1.6em;
+    }
+    h3 {
+      margin-top: -12%;
+    }
+  }
+
+  .menu{
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    left: 40%;
+    padding-bottom: 120%;
+    top: 0;
+    z-index: 60;          
+    img {
+      width: 14%;
+      margin-left: 77%;
+      margin-top: 9%;
+    }
+
+    ul {
+      height: 63%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+  }
+
+  #close{
+    z-index: 99;
+    cursor: pointer;
+  } 
+
+  .icon{
+    display: block;
+  }
+}
+
+#close{
+  z-index: 99;
+  cursor: pointer;
+}
